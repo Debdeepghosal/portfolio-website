@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debdeep Ghosal - Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+        }
+    }
+    </script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.7.2/dist/vanilla-tilt.min.js"></script>
+</head>
+<body>
+    <!-- 3D Canvas -->
+    <div id="bg-canvas"></div>
+
+    <!-- Content Container -->
+    <div class="content-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-content">
+                <div class="logo">DG</div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="profile-image">
+                    <img src="images/WhatsApp Image 2025-06-04 at 17.03.29.jpeg" alt="Debdeep Ghosal">
+                </div>
+                <h1>Hi, I'm Debdeep Ghosal</h1>
+                <p class="subtitle">Machine Learning Engineer</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn primary">Get in Touch</a>
+                    <a href="https://drive.google.com/drive/folders/1POco_k5G14mat6nDBVEXSR2ISk_kNx_a?usp=sharing" class="btn primary" target="_blank" rel="noopener">Download CV</a>
+                    <a href="#about" class="btn secondary">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section">
+            <div class="container">
+                <h2>About Me</h2>
+                <div class="about-content">
+                    <div class="about-text">
+                        <p>I'm Debdeep Ghosal, an AI Engineer passionate about building scalable, real-world AI systems. I've worked across multiple startups, where each role sharpened my skills in both research and product development.</p>
+                        <p>At Korra AI, I build scalable ML workflows using Prefect and NSQ, evaluate LLMs and RAG pipelines, and work extensively on agentic systems using techniques like ReAct and Reflexion. Previously, at Oryx AI and IIT Indore, I focused on generative AI, NLP, and computer vision, gaining hands-on research experience with cutting-edge models.</p>
+                        <p>At Zigy, I contributed to backend infrastructure for a generative e-commerce platform, helping develop core systems from the ground up.</p>
+                        <p>I bring full-stack AI experience—from model evaluation and agent design to cloud-based deployment and backend engineering. Outside of work, I love building side projects, exploring new tools, and contributing to open-source.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="section">
+            <div class="container">
+                <h2>Experience</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="floating-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Junior AI Engineer</h3>
+                            <p class="company">Korra AI, Jerusalem, Israel</p>
+                            <p class="date">July 2024 - Present</p>
+                            <ul>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Built document layout analysis pipelines using VLMs and document processing tools
+                                </li>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Implemented ML workflows with Prefect, integrating components into NSQ-based pipeline
+                                </li>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Developed and evaluated agentic workflows using Chain of Thought, ReAct, and Knowledge Graphs
+                                </li>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Evaluated LLMs with RAGAS, focusing on faithfulness, relevance, recall, and precision
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="floating-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.07-.34.11-.52.11-.18 0-.36-.04-.52-.11l-7.9-4.44c-.32-.17-.53-.5-.53-.88V7.5c0-.38.21-.71.53-.88l7.9-4.44c.16-.07.34-.11.52-.11.18 0 .36.04.52.11l7.9 4.44c.32.17.53.5.53.88v9z"/>
+                                <path d="M12 2.5l7.9 4.44-7.9 4.44-7.9-4.44L12 2.5z"/>
+                                <path d="M12 11.5l7.9 4.44-7.9 4.44-7.9-4.44L12 11.5z"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>ML Engineer Intern</h3>
+                            <p class="company">Oryx AI, Palo Alto, California</p>
+                            <p class="date">April 2024 - June 2024</p>
+                            <ul>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Conducted research on new algorithms and techniques in ML, NLP, and Computer Vision
+                                </li>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Worked on collection and preprocessing of large-scale computer vision datasets (>1TB)
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="floating-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                                <path d="M12 6c-3.31 0-6 2.69-6 6s2.69 6 6 6 6-2.69 6-6-2.69-6-6-6zm0 10c-2.21 0-4-1.79-4-4s1.79-4 4-4 4 1.79 4 4-1.79 4-4 4z"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>ML Research Intern</h3>
+                            <p class="company">IIT Indore</p>
+                            <p class="date">2023</p>
+                            <ul>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Explored innovative approaches to enhance existing models and architectures
+                                </li>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Conducted in-depth research on state-of-the-art models and architectures
+                                </li>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Collaborated with Professors and Ph.D. students on research papers
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="floating-icon">
+                            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V6h16v12z"/>
+                                <path d="M6 10h12v2H6zm0-4h12v2H6zm0 8h8v2H6z"/>
+                                <path d="M14 16h6v2h-6z"/>
+                            </svg>
+                        </div>
+                        <div class="timeline-content">
+                            <h3>Backend Developer Intern</h3>
+                            <p class="company">Zigy</p>
+                            <p class="date">2023</p>
+                            <ul>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Designed and implemented RESTful APIs for an early-stage e-commerce website and application
+                                </li>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Worked on backend components including authentication, authorization, and database management
+                                </li>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Implemented Redis cache to improve API response time
+                                </li>
+                                <li>
+                                    <svg class="rotating-disc-svg" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="12" cy="12" r="8"/>
+                                    </svg>
+                                    Containerized the backend stack and gained experience with AWS services like S3
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="section">
+            <div class="container">
+                <h2>Skills</h2>
+                <div class="skills-slider">
+                    <div class="skills-track">
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3>ML & AI</h3>
+                            <div class="skill-tags">
+                                <span>Python</span>
+                                <span>TensorFlow</span>
+                                <span>PyTorch</span>
+                                <span>Keras</span>
+                                <span>OpenCV</span>
+                                <span>Scikit-learn</span>
+                                <span>vllm</span>
+                                <span>ragas</span>
+                                <span>CrewAI</span>
+                                <span>LLMs</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h3>Backend & DevOps</h3>
+                            <div class="skill-tags">
+                                <span>Node.js</span>
+                                <span>Express.js</span>
+                                <span>FastAPI</span>
+                                <span>Redis</span>
+                                <span>Docker</span>
+                                <span>Jenkins</span>
+                                <span>Kubernetes</span>
+                                <span>AWS</span>
+                                <span>Terraform</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <h3>Programming</h3>
+                            <div class="skill-tags">
+                                <span>Python</span>
+                                <span>JavaScript</span>
+                                <span>TypeScript</span>
+                                <span>C++</span>
+                                <span>C</span>
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                        <div class="skill-card">
+                            <div class="skill-icon">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <h3>Databases & Tools</h3>
+                            <div class="skill-tags">
+                                <span>MongoDB</span>
+                                <span>SQL</span>
+                                <span>Git</span>
+                                <span>GitHub</span>
+                                <span>VS Code</span>
+                                <span>Postman</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider-controls">
+                        <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                        <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Get in Touch</h2>
+                <div class="contact-content">
+                    <form id="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" required placeholder="Your Name">
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder="Your Email">
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required placeholder="Your Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="social-links">
+                    <a href="https://github.com/Debdeepghosal" target="_blank" rel="noopener" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/debdeepghosal/" target="_blank" rel="noopener" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://x.com/debdeep_ghosal" target="_blank" rel="noopener" title="Twitter/X"><i class="fab fa-twitter"></i></a>
+                </div>
+                <p>&copy; 2024 Debdeep Ghosal. All rights reserved.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/net-min.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        if (window.VANTA && window.VANTA.NET) {
+          window.VANTA.NET({
+            el: "#bg-canvas",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.0,
+            scaleMobile: 1.0,
+            color: 0x2563eb,
+            backgroundColor: 0xffffff,
+            points: 12.0,
+            maxDistance: 22.0,
+            spacing: 18.0
+          });
+        }
+      });
+    </script>
+    <script src="js/main.js"></script>
+</body>
+</html> 
